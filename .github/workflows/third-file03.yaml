@@ -14,6 +14,7 @@ jobs:
         runs-on: windows-latest
         steps:
             - name: ShowWindows
+              shell: bash  
               run: |
                   echo "Example of running Windows job"
                   echo "The runner is $RUNNER_OS"
