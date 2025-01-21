@@ -10,3 +10,10 @@ jobs:
               run: |  
                 echo "Example of showing runner os"
                 echo " The runner is $RUNNER_OS"
+    windows-echo:
+        runs-on: windows-latest
+        steps:
+            - name: ShowWindows
+              run: |
+                  echo "Example of running Windows job"
+                  echo "The runner is $RUNNER_OS"
