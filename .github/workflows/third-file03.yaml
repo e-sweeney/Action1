@@ -1,0 +1,12 @@
+name: 3 - Workflow Example
+
+on: push
+
+jobs:
+    ubuntu-echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show OS
+              run: |  
+                echo "Example of showing runner os"
+                echo " The runner is $RUNNER_OS"
