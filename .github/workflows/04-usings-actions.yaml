@@ -11,10 +11,8 @@ jobs:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Start an Alpine-based web server
+            
+            - name: Build Edwina Alpine web server
               run: |
-                #Pull the nginx image
-                docker pull nginx:alpine
-
-                docker run -d --name web-server -p 8080:80 nginx:alpine
-                docker ps
+                docker build -t edwina-nginx-server .
+                docker run --name eds-web-server -p 8080:80 edwina-nginx-server
