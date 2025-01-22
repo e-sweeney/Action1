@@ -14,5 +14,5 @@ jobs:
             
             - name: Build Edwina Alpine web server
               run: |
-                docker build -t edwina-nginx-server .
+                docker build -t edwina-nginx-server .github/workflows
                 docker run --name eds-web-server -p 8080:80 edwina-nginx-server
