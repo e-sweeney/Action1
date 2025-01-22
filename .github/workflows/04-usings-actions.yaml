@@ -1,0 +1,20 @@
+name: 04 - Using-actions.yaml
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        #1. install deps of our react appl
+        #2. execute automated steps.
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Start an Alpine-based web server
+              run: |
+                #Pull the nginx image
+                docker pull nginx:alpine
+
+                docker run -d --name web-server -p 8080:80 nginx:alpine
+                docker ps
