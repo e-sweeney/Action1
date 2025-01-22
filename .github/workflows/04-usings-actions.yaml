@@ -10,16 +10,18 @@ jobs:
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
-
+            - name: Printing Folders
+              run:
+                ls
             
-            - name: Build Edwina Alpine web server
-              run: |
-                docker build -t edwina-nginx-server .github/workflows
-                docker run -d --name eds-web-server -p 8080:80 edwina-nginx-server
-                docker ps
-                
+           # - name: Build Edwina Alpine web server
+           #   run: |
+           #     docker build -t edwina-nginx-server .github/workflows
+           #     docker run -d --name eds-web-server -p 8080:80 edwina-nginx-server
+           #     docker ps
+
             #Test the web Server
-            - name: Test Web Server
-              run: |
-                  sleep 5
-                  curl http://localhost:8080
+           # - name: Test Web Server
+           #   run: |
+           #       sleep 5
+           #       curl http://localhost:8080
