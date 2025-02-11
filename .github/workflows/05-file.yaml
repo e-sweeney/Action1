@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  testfile-05:
-  runs-on: ubuntu-latest
-
-    steps:
-      run: echo Hello, world!
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show the trigger 
+              run: echo "I have been triggeed by event"
       
