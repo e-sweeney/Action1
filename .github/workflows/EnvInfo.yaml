@@ -1,4 +1,4 @@
-name: 01 - Printing Env
+name: 01 - Printing Env for a simepl workflow
 
 on:
   workflow_dispatch:
