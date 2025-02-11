@@ -7,6 +7,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Build Docker image
-        run: docker build -t flask-app ./WebApp
+        run: docker build -t flask-app ./WebAppdocker stop
       - name: Run Docker container
         run: docker run -d -p 5000:5000 flask-app
+      - name: Check running containers
+        run: docker ps
