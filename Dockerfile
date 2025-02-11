@@ -1,4 +1,4 @@
-FROM centos7:latest
+FROM centos:latest
 
 ENV JAVA_SRC=/usr/lib/jvm/javajdk1.8
 ENV MYDIR=/tmp
