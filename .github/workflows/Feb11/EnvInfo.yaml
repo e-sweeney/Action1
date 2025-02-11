@@ -1,0 +1,9 @@
+name: 01 - Printing Env
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ubuntu-environment-variables:
+    runs-on: ubuntu-latest
+      - run: env
