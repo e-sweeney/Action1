@@ -6,8 +6,11 @@ jobs:
     publich_images:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
+            - name: Checkout Code
               uses: actions/checkout@v4
+            - name: Printing Folders
+              run:
+                ls
             - name: build image
               run: docker build /workspaces/Action1/.github/workflows/dockerfilesapp -t edwinasweeney/githubbuild:latest
             - name: push image to docker hub
