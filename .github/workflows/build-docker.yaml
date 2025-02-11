@@ -12,7 +12,7 @@ jobs:
               run:
                 ls
             - name: build image
-              run: docker build /workspaces/Action1/.github/workflows/dockerfilesapp -t edwinasweeney/githubbuild:latest
+              run: docker build . -t edwinasweeney/githubbuild:latest
             - name: push image to docker hub
               run: |
                 docker push edwinasweeney/githubbuild:latest
